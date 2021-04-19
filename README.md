@@ -5,7 +5,7 @@
   - [AKS](azure/aks/README.md): Azure Kubernetes Service
 - Kubernetes:
   - Apps:
-    - [Generic]](kubernetes/apps/generic/README.md): Generic Applications
+    - [Generic](kubernetes/apps/generic/README.md): Generic Applications
   - Ingress:
     - [Nginx-Controller](kubernetes/ingress/nginx-controller/README.md): Nginx - Ingress Controller
 
