@@ -48,18 +48,6 @@ variable "nodes_os_disk_size" { default = 30 }
 variable "kube_dashboard_enabled" { default = false }
 ```
 
-### Versions
-
-To specify a version (repository tag):
-```bash
-source = "git::https://github.com/nevertheless-space/terraform-modules//azure/aks?ref=<tag>"
-```
-
-For example:
-```bash
-source = "git::https://github.com/nevertheless-space/terraform-modules//azure/aks?ref=azure/aks-X.XX.XX"
-```
-
 ### Outputs
 
 [Azure Provider Documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster#kube_config):

@@ -84,15 +84,3 @@ helm_timeout = 900
   annotations = []
 }
 ```
-
-### Versions
-
-To specify a versione (repository tag):
-```bash
-source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/ingress/nginx-controller?ref=<tag>"
-```
-
-For example:
-```bash
-source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/ingress/nginx-controller?ref=kubernetes/ingress/nginx-controller-X.XX.XX"
-```
