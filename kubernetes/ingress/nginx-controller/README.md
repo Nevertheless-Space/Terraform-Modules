@@ -1,4 +1,4 @@
-## AKS - Azure (Managed) Kubernetes Service
+## Nginx - Ingress Controller
 
 ### Usage Example
 
