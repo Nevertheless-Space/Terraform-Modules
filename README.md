@@ -6,6 +6,7 @@
 - Kubernetes:
   - Apps:
     - [Generic](kubernetes/apps/generic/README.md): Generic Applications
+    - [Postgresql](kubernetes/apps/postgresql/README.md): Postgresql DB
   - Ingress:
     - [Nginx-Controller](kubernetes/ingress/nginx-controller/README.md): Nginx - Ingress Controller
 
