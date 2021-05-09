@@ -28,7 +28,7 @@ resource "kubernetes_ingress" "ingress" {
           path = lookup(element(local.ingresses.*.ingress, count.index), "path", "/")
           backend {
             service_name = element(local.ingresses.*.name, count.index)
-            service_port = element(local.ingresses.*.service_port, count.index)
+            service_port = lookup(element(local.ingresses.*.ingress, count.index), "service_port", element(local.ingresses.*.service_ports.0.port, count.index))
           }
         }
       }

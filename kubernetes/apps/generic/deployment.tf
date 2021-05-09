@@ -25,11 +25,20 @@ resource "kubernetes_deployment" "deployment" {
         container {
           image = element(var.apps.*.image, count.index)
           name  = element(var.apps.*.name, count.index)
-
+          args = lookup(element(var.apps, count.index), "args", [])
+          command = lookup(element(var.apps, count.index), "command", [])
           dynamic "port" {
-            for_each = lookup(element(var.apps, count.index), "container_port", null) == null ? [] : [1]
+            for_each = lookup(element(var.apps, count.index), "container_ports", [])
             content {
-              container_port = element(var.apps.*.container_port, count.index)
+              container_port = port.value.port
+              protocol = lookup(port.value, "protocol", "TCP")
+            }
+          }
+          dynamic "env" {
+            for_each = lookup(element(var.apps, count.index), "env_variables", [])
+            content {
+              name = env.value.name
+              value = env.value.value
             }
           }
           dynamic "resources" {
