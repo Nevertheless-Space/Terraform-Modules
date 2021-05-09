@@ -1,7 +1,7 @@
 # Postgresql DB
 
 - For the default values see: `defaults.tf`
-- For the input variables see: `inputs.vars.tf`
+- For the input variables see: `inputs.tf`
 - For the terraform providers versions see: `terraform.tf`
 
 ## Example

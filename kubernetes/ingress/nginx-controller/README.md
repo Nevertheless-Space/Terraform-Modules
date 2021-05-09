@@ -1,5 +1,9 @@
 ## Nginx - Ingress Controller
 
+- For the default values see: `defaults.tf`
+- For the input variables see: `inputs.tf`
+- For the terraform providers versions see: `terraform.tf`
+
 ### Usage Example
 
 #### Basic
