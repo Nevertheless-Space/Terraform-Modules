@@ -1,0 +1,10 @@
+locals {
+  defaults = {
+    name = "script"
+    image = "ubuntu:20.04"
+    labels = {}
+    backoff_limit = 4
+    wait_for_completion = true
+    completion_timeout = "120" # seconds
+  }
+}
