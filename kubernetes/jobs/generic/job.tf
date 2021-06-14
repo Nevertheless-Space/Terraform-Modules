@@ -45,6 +45,7 @@ resource "kubernetes_job" "job" {
             } 
           }
         }
+        restart_policy = "Never"
       }
     }
     backoff_limit = lookup(element(var.jobs, count.index), "backoff_limit", local.defaults.backoff_limit)
