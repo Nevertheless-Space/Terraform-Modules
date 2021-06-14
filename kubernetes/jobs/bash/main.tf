@@ -6,10 +6,11 @@ module "generic-job" {
   namespace = var.namespace
   jobs = [
     {
-      name = "${lookup(element(var.specs, count.index), "name", local.defaults.name)}"
-      image = "${lookup(element(var.specs, count.index), "image", local.defaults.image)}"
+      name = lookup(element(var.specs, count.index), "name", local.defaults.name)
+      image = lookup(element(var.specs, count.index), "image", local.defaults.image)
+      env_variables = lookup(element(var.specs, count.index), "env_variables", local.defaults.env_variables)
       args = ["echo \"$(cat /tmp/script.sh)\" > /home/script.sh; cd /home; chmod +x ./script.sh; ./script.sh"]
-      command = ["bash", "-c"]
+      command = split(" ", lookup(element(var.specs, count.index), "interpreter_commands", local.defaults.interpreter_commands))
       config_map = {
         mount_path = "/tmp"
         data = {

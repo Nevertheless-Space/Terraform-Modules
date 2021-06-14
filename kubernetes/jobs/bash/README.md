@@ -17,6 +17,8 @@ module "bash-jobs" {
   specs = [{
     # name = "test"
     # image = "ubuntu:20.04"
+    # env_variables = []
+    # interpreter_commands = "sh -c" # default: "bash -c"
     commands = "echo \"prova1\"; dir; cd /etc; dir"
     # labels = {}
     # backoff_limit = 4
