@@ -44,6 +44,7 @@ resource "helm_release" "ingresscontroller_nginx" {
     content {
       name  = set.value.name
       value = set.value.value
+      type  = "string"
     }
   }
   # ---------------------------------- Annotations ----------------------------------- #

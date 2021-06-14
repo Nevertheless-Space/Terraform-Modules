@@ -1,5 +1,9 @@
 # Kubernetes Generic Applications
 
+- For the default values see: `defaults.tf`
+- For the input variables see: `inputs.tf`
+- For the terraform providers versions see: `terraform.tf`
+
 ## Usage Example
 
 The commented fields are optional.
@@ -14,8 +18,28 @@ module "generic-apps" {
     # replicas = 1
     name = "nginx"
     image = "nginx"
-    # container_port = 80
-    # service_port = 80
+    # args = []
+    # command = ["dir"]
+    # env_variables = [
+    #   {
+    #     name = "var_1"
+    #     value = "value_1"
+    #   }
+    # ]
+    # container_ports = [
+    #   {
+    #     port = "80"
+    #     # protocol = "UDP" # default: "TCP"
+    #   }
+    # ]
+    # service_ports = [
+    #   {
+    #     # name = "http" # default: "protocol" + "-" + "port"
+    #     port = "80"
+    #     # target_port = "80" # default: port value
+    #     # protocol = "UDP" # default: "TCP"
+    #   }
+    # ]
     # service_type = "ClusterIP"
     # labels = {}
     # resources = {
@@ -39,6 +63,7 @@ module "generic-apps" {
     #   ingress_class = "nginx-test"
     #   # hostname = ""
     #   # path = "/"
+    #   # # service_port = "80" # default: the first container port
     #   # annotations = {}
     #   # tls = {
     #   #   hosts = []

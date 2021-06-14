@@ -1,5 +1,9 @@
 ## Nginx - Ingress Controller
 
+- For the default values see: `defaults.tf`
+- For the input variables see: `inputs.tf`
+- For the terraform providers versions see: `terraform.tf`
+
 ### Usage Example
 
 #### Basic
@@ -38,17 +42,21 @@ module "nginx_controller" {
           value = "16k"
         },
         {
-          name = "controller.config.proxy-buffers"
-          value = "4 16k"
+          name = "controller.config.proxy-buffers-number"
+          value = "4"
         },
         {
-          name = "proxy-busy-buffers-size"
-          value = "16k"
-        },
-        {
-          name = "use-forwarded-headers"
+          name = "controller.config.use-forwarded-headers"
           value = "true"
-        }
+        },
+        # {
+        #   name = "udp.8080"
+        #   value = "namespace/test-tcp:8080"
+        # },
+        # {
+        #   name = "udp.8125"
+        #   value = "namespace/test-udp:8125"
+        # },
       ]
       annotations = [
         {
