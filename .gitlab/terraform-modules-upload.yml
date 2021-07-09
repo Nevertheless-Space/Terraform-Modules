@@ -1,0 +1,9 @@
+.terraform_modules_upload:
+  image: registry.gitlab.com/nevertheless.space/docker-registry/linux-shell-headless:1.0.0
+  variables:
+    GIT_TAG: ${CI_COMMIT_TAG}
+    PROJECT_URL: "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}"
+    TOKEN: ${CI_TOKEN}
+  script:
+    - chmod +x .gitlab/scripts/terraform-modules-upload.sh
+    - ./.gitlab/scripts/terraform-modules-upload.sh $GIT_TAG $PROJECT_URL $TOKEN
