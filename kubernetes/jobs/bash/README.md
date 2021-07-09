@@ -11,7 +11,9 @@ The commented fields are optional.
 ```bash
 module "bash-jobs" {
 
-  source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/jobs/bash"
+  # source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/jobs/bash"
+  source = "gitlab.com/nevertheless.space/bash/kubernetes-jobs"
+  version = "0.2.0" # https://gitlab.com/nevertheless.space/Terraform-Modules/-/infrastructure_registry?sort=desc&orderBy=created_at&search[]=bash%2Fkubernetes-jobs&search[]=
   
   # namespace = "default"
   specs = [{

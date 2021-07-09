@@ -21,7 +21,9 @@ provider "azurerm" {
 }
 module "aks" {
 
-  source = "git::https://github.com/nevertheless-space/terraform-modules//azure/aks"
+  # source = "git::https://github.com/nevertheless-space/terraform-modules//azure/aks"
+  source = "gitlab.com/nevertheless.space/aks/azure"
+  version = "1.0.0" # https://gitlab.com/nevertheless.space/Terraform-Modules/-/infrastructure_registry?sort=desc&orderBy=created_at&search[]=aks%2Fazure&search[]=
 
   tenant = "example"
   env = "test"

@@ -16,6 +16,12 @@
 
 ### Versions
 
+#### Infrastructure Registry
+
+- [Infrastructure Registry - Terraform Modules](https://gitlab.com/nevertheless.space/Terraform-Modules/-/infrastructure_registry)
+
+#### Git
+
 To specify a version (repository tag):
 ```bash
 source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/ingress/nginx-controller?ref=<tag>"

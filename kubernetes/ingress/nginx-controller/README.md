@@ -10,7 +10,9 @@
 ```bash
 module "nginx_controller" {
 
-  source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/ingress/nginx-controller"
+  # source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/ingress/nginx-controller"
+  source = "gitlab.com/nevertheless.space/nginx-controller/kubernetes-ingress"
+  version = "1.1.0" # https://gitlab.com/nevertheless.space/Terraform-Modules/-/infrastructure_registry?sort=desc&orderBy=created_at&search[]=nginx-controller%2Fkubernetes-ingress&search[]=
   
   namespace = "nginx-ingress-controller"
   ingress_controllers = [
@@ -25,8 +27,10 @@ module "nginx_controller" {
 ```bash
 module "nginx_controller" {
 
-  source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/ingress/nginx-controller"
-  
+  # source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/ingress/nginx-controller"
+  source = "gitlab.com/nevertheless.space/nginx-controller/kubernetes-ingress"
+  version = "1.1.0" # https://gitlab.com/nevertheless.space/Terraform-Modules/-/infrastructure_registry?sort=desc&orderBy=created_at&search[]=nginx-controller%2Fkubernetes-ingress&search[]=
+
   namespace = "nginx-ingress-controller"
   chart_version = "2.11.3" # https://github.com/kubernetes/ingress-nginx/tree/master/charts/ingress-nginx
   ingress_controllers = [

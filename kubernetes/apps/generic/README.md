@@ -11,7 +11,9 @@ The commented fields are optional.
 ```bash
 module "generic-apps" {
 
-  source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/apps/generic"
+  # source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/apps/generic"
+  source = "gitlab.com/nevertheless.space/generic/kubernetes-apps"
+  version = "0.2.0" # https://gitlab.com/nevertheless.space/Terraform-Modules/-/infrastructure_registry?sort=desc&orderBy=created_at&search[]=generic%2Fkubernetes-apps&search[]=
   
   namespace = "nginx"
   apps = [{

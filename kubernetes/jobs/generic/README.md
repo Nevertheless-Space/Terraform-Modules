@@ -10,7 +10,9 @@ The commented fields are optional.
 ```bash
 module "generic-jobs" {
 
-  source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/jobs/generic"
+  # source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/jobs/generic"
+  source = "gitlab.com/nevertheless.space/generic/kubernetes-jobs"
+  version = "0.1.1" # https://gitlab.com/nevertheless.space/Terraform-Modules/-/infrastructure_registry?sort=desc&orderBy=created_at&search[]=generic%2Fkubernetes-jobs&search[]=
   
   namespace = "default"
   jobs = [{

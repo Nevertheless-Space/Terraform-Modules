@@ -9,7 +9,9 @@ The commented fields are optional.
 ```bash
 module "postgresql" {
 
-  source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/apps/postgresql"
+  # source = "git::https://github.com/nevertheless-space/terraform-modules//kubernetes/apps/postgresql"
+  source = "gitlab.com/nevertheless.space/postgresql/kubernetes-apps"
+  version = "0.1.0" # https://gitlab.com/nevertheless.space/Terraform-Modules/-/infrastructure_registry?sort=desc&orderBy=created_at&search[]=postgresql%2Fkubernetes-apps&search[]=
 
   # chart_version = "10.4.2"
   namespace = "postgresql"
